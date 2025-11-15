@@ -1,0 +1,412 @@
+
+
+==================================================
+ANALYZING FILE: m-paper-all-transcripts_output_small.csv
+==================================================
+
+Loaded 399 rows from m-paper-all-transcripts_output_small.csv
+After cleaning: 399 rows
+
+=== T-Test Results: Does is_correct predict human_turn_count, conversation_count? ===
+
+Measure: human_turn_count
+  Mean when is_correct=0: 5.6020
+  Mean when is_correct=1: 4.5216
+  t-statistic: 2.5061
+  p-value: 0.0131
+  Significant at α=0.05: Yes
+
+Measure: conversation_count
+  Mean when is_correct=0: 3.4694
+  Mean when is_correct=1: 3.0831
+  t-statistic: 1.6243
+  p-value: 0.1061
+  Significant at α=0.05: No
+
+=== Logistic Regression: Does human_turn_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.0700
+  Odds Ratio: 0.9324
+  p-value: 0.0162
+  Significant at α=0.05: Yes
+
+Interpretation:
+  For each unit increase in human_turn_count, the odds of is_correct=1 decrease by a factor of 1.0725
+
+Detailed Model Summary:
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                1.4742      0.193      7.653      0.000       1.097       1.852
+human_turn_count    -0.0700      0.029     -2.404      0.016      -0.127      -0.013
+====================================================================================
+
+=== Logistic Regression: Does conversation_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.0795
+  Odds Ratio: 0.9236
+  p-value: 0.1230
+  Significant at α=0.05: No
+
+Interpretation:
+  For each unit increase in conversation_count, the odds of is_correct=1 decrease by a factor of 1.0827
+
+Detailed Model Summary:
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  1.3817      0.208      6.634      0.000       0.973       1.790
+conversation_count    -0.0795      0.052     -1.542      0.123      -0.180       0.022
+======================================================================================
+
+=== Chi-Square Test: Does human_turn_gt1 predict is_correct? ===
+Note: human_turn_gt1 = 0 occurs 65/399 times (16.29%)
+      human_turn_gt1 = 1 occurs 334/399 times (83.71%)
+
+Contingency Table (counts):
+is_correct       0    1
+human_turn_gt1         
+0                9   56
+1               89  245
+
+Percentage Table (% within each row):
+is_correct          0      1
+human_turn_gt1              
+0               13.85  86.15
+1               26.65  73.35
+
+chi-square: 4.1456
+p-value: 0.0417
+degrees of freedom: 1
+Significant at α=0.05: Yes
+
+=== Chi-Square Test: Does conv_count_gt1 predict is_correct? ===
+Note: conv_count_gt1 = 0 occurs 75/399 times (18.80%)
+      conv_count_gt1 = 1 occurs 324/399 times (81.20%)
+
+Contingency Table (counts):
+is_correct       0    1
+conv_count_gt1         
+0               11   64
+1               87  237
+
+Percentage Table (% within each row):
+is_correct          0      1
+conv_count_gt1              
+0               14.67  85.33
+1               26.85  73.15
+
+chi-square: 4.2449
+p-value: 0.0394
+degrees of freedom: 1
+Significant at α=0.05: Yes
+
+
+==================================================
+ANALYZING FILE: q-paper-all-transcripts_output_small.csv
+==================================================
+
+Loaded 398 rows from q-paper-all-transcripts_output_small.csv
+After cleaning: 398 rows
+
+=== T-Test Results: Does is_correct predict human_turn_count, conversation_count? ===
+
+Measure: human_turn_count
+  Mean when is_correct=0: 4.5385
+  Mean when is_correct=1: 4.5309
+  t-statistic: 0.0408
+  p-value: 0.9675
+  Significant at α=0.05: No
+
+Measure: conversation_count
+  Mean when is_correct=0: 1.1209
+  Mean when is_correct=1: 1.1173
+  t-statistic: 0.0928
+  p-value: 0.9262
+  Significant at α=0.05: No
+
+=== Logistic Regression: Does human_turn_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.0029
+  Odds Ratio: 0.9971
+  p-value: 0.9688
+  Significant at α=0.05: No
+
+Interpretation:
+  For each unit increase in human_turn_count, the odds of is_correct=1 decrease by a factor of 1.0029
+
+Detailed Model Summary:
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                1.2291      0.357      3.444      0.001       0.530       1.929
+human_turn_count    -0.0029      0.074     -0.039      0.969      -0.148       0.142
+====================================================================================
+
+=== Logistic Regression: Does conversation_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.0345
+  Odds Ratio: 0.9661
+  p-value: 0.9252
+  Significant at α=0.05: No
+
+Interpretation:
+  For each unit increase in conversation_count, the odds of is_correct=1 decrease by a factor of 1.0351
+
+Detailed Model Summary:
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  1.2546      0.428      2.929      0.003       0.415       2.094
+conversation_count    -0.0345      0.367     -0.094      0.925      -0.754       0.685
+======================================================================================
+
+=== Chi-Square Test: Does human_turn_gt1 predict is_correct? ===
+Note: human_turn_gt1 = 0 occurs 0/398 times (0.00%)
+      human_turn_gt1 = 1 occurs 398/398 times (100.00%)
+
+Contingency Table (counts):
+is_correct       0    1
+human_turn_gt1         
+1               91  307
+
+Percentage Table (% within each row):
+is_correct          0      1
+human_turn_gt1              
+1               22.86  77.14
+
+chi-square: 0.0000
+p-value: 1.0000
+degrees of freedom: 0
+Significant at α=0.05: No
+
+=== Chi-Square Test: Does conv_count_gt1 predict is_correct? ===
+Note: conv_count_gt1 = 0 occurs 351/398 times (88.19%)
+      conv_count_gt1 = 1 occurs 47/398 times (11.81%)
+
+Contingency Table (counts):
+is_correct       0    1
+conv_count_gt1         
+0               80  271
+1               11   36
+
+Percentage Table (% within each row):
+is_correct          0      1
+conv_count_gt1              
+0               22.79  77.21
+1               23.40  76.60
+
+chi-square: 0.0000
+p-value: 1.0000
+degrees of freedom: 1
+Significant at α=0.05: No
+
+
+==================================================
+ANALYZING FILE: m-plus-all-transcripts_output_small.csv
+==================================================
+
+Loaded 400 rows from m-plus-all-transcripts_output_small.csv
+After cleaning: 400 rows
+
+=== T-Test Results: Does is_correct predict human_turn_count, conversation_count? ===
+
+Measure: human_turn_count
+  Mean when is_correct=0: 5.8039
+  Mean when is_correct=1: 3.6141
+  t-statistic: 4.8155
+  p-value: 0.0000
+  Significant at α=0.05: Yes
+
+Measure: conversation_count
+  Mean when is_correct=0: 3.1373
+  Mean when is_correct=1: 2.3826
+  t-statistic: 3.7981
+  p-value: 0.0002
+  Significant at α=0.05: Yes
+
+=== Logistic Regression: Does human_turn_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.1585
+  Odds Ratio: 0.8534
+  p-value: 0.0000
+  Significant at α=0.05: Yes
+
+Interpretation:
+  For each unit increase in human_turn_count, the odds of is_correct=1 decrease by a factor of 1.1718
+
+Detailed Model Summary:
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                1.7953      0.196      9.146      0.000       1.411       2.180
+human_turn_count    -0.1585      0.032     -4.883      0.000      -0.222      -0.095
+====================================================================================
+
+=== Logistic Regression: Does conversation_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.2800
+  Odds Ratio: 0.7558
+  p-value: 0.0001
+  Significant at α=0.05: Yes
+
+Interpretation:
+  For each unit increase in conversation_count, the odds of is_correct=1 decrease by a factor of 1.3232
+
+Detailed Model Summary:
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  1.8328      0.233      7.881      0.000       1.377       2.289
+conversation_count    -0.2800      0.071     -3.932      0.000      -0.420      -0.140
+======================================================================================
+
+=== Chi-Square Test: Does human_turn_gt1 predict is_correct? ===
+Note: human_turn_gt1 = 0 occurs 93/400 times (23.25%)
+      human_turn_gt1 = 1 occurs 307/400 times (76.75%)
+
+Contingency Table (counts):
+is_correct       0    1
+human_turn_gt1         
+0               14   79
+1               88  219
+
+Percentage Table (% within each row):
+is_correct          0      1
+human_turn_gt1              
+0               15.05  84.95
+1               28.66  71.34
+
+chi-square: 6.2623
+p-value: 0.0123
+degrees of freedom: 1
+Significant at α=0.05: Yes
+
+=== Chi-Square Test: Does conv_count_gt1 predict is_correct? ===
+Note: conv_count_gt1 = 0 occurs 107/400 times (26.75%)
+      conv_count_gt1 = 1 occurs 293/400 times (73.25%)
+
+Contingency Table (counts):
+is_correct       0    1
+conv_count_gt1         
+0               18   89
+1               84  209
+
+Percentage Table (% within each row):
+is_correct          0      1
+conv_count_gt1              
+0               16.82  83.18
+1               28.67  71.33
+
+chi-square: 5.1832
+p-value: 0.0228
+degrees of freedom: 1
+Significant at α=0.05: Yes
+
+
+==================================================
+ANALYZING FILE: q-plus-all-transcripts_output_small.csv
+==================================================
+
+Loaded 400 rows from q-plus-all-transcripts_output_small.csv
+After cleaning: 400 rows
+
+=== T-Test Results: Does is_correct predict human_turn_count, conversation_count? ===
+
+Measure: human_turn_count
+  Mean when is_correct=0: 4.5921
+  Mean when is_correct=1: 4.3519
+  t-statistic: 1.4176
+  p-value: 0.1591
+  Significant at α=0.05: No
+
+Measure: conversation_count
+  Mean when is_correct=0: 1.1053
+  Mean when is_correct=1: 1.0556
+  t-statistic: 0.9849
+  p-value: 0.3273
+  Significant at α=0.05: No
+
+=== Logistic Regression: Does human_turn_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.1357
+  Odds Ratio: 0.8731
+  p-value: 0.1588
+  Significant at α=0.05: No
+
+Interpretation:
+  For each unit increase in human_turn_count, the odds of is_correct=1 decrease by a factor of 1.1454
+
+Detailed Model Summary:
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const                2.0571      0.456      4.509      0.000       1.163       2.951
+human_turn_count    -0.1357      0.096     -1.409      0.159      -0.325       0.053
+====================================================================================
+
+=== Logistic Regression: Does conversation_count predict is_correct? ===
+
+Model Summary:
+  Coefficient: -0.4223
+  Odds Ratio: 0.6555
+  p-value: 0.2231
+  Significant at α=0.05: No
+
+Interpretation:
+  For each unit increase in conversation_count, the odds of is_correct=1 decrease by a factor of 1.5255
+
+Detailed Model Summary:
+======================================================================================
+                         coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+const                  1.9049      0.398      4.785      0.000       1.125       2.685
+conversation_count    -0.4223      0.347     -1.218      0.223      -1.102       0.257
+======================================================================================
+
+=== Chi-Square Test: Does human_turn_gt1 predict is_correct? ===
+Note: human_turn_gt1 = 0 occurs 0/400 times (0.00%)
+      human_turn_gt1 = 1 occurs 400/400 times (100.00%)
+
+Contingency Table (counts):
+is_correct       0    1
+human_turn_gt1         
+1               76  324
+
+Percentage Table (% within each row):
+is_correct         0     1
+human_turn_gt1            
+1               19.0  81.0
+
+chi-square: 0.0000
+p-value: 1.0000
+degrees of freedom: 0
+Significant at α=0.05: No
+
+=== Chi-Square Test: Does conv_count_gt1 predict is_correct? ===
+Note: conv_count_gt1 = 0 occurs 379/400 times (94.75%)
+      conv_count_gt1 = 1 occurs 21/400 times (5.25%)
+
+Contingency Table (counts):
+is_correct       0    1
+conv_count_gt1         
+0               70  309
+1                6   15
+
+Percentage Table (% within each row):
+is_correct          0      1
+conv_count_gt1              
+0               18.47  81.53
+1               28.57  71.43
+
+chi-square: 0.7446
+p-value: 0.3882
+degrees of freedom: 1
+Significant at α=0.05: No

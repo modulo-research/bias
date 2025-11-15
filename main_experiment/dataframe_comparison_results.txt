@@ -1,0 +1,4 @@
+# Dataframe Comparison Results
+This file contains detailed information about differences between dataframes with and without the 'wave' column.
+
+## Loading dataframes
