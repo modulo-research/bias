@@ -1,6 +1,6 @@
 # Repository accompanying 'Confirmation Bias: A Challenge for Scalable Oversight' by Recchia et al.
 
-This repository contains code and data accompanying the paper 'Confirmation Bias: A Challenge for Scalable Oversight' (in proc. AAAI 2026). The [extended arXiv version](https://arxiv.org/abs/2507.19486) of the paper contains substantially more detail than the pfficial published version.
+This repository contains code and data accompanying the paper 'Confirmation Bias: A Challenge for Scalable Oversight' (in proc. AAAI 2026). The [extended arXiv version](https://arxiv.org/abs/2507.19486) of the paper contains substantially more detail than the official published version.
 
 ## Navigating this repo
 
